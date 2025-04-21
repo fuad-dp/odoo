@@ -12,7 +12,7 @@ services:
       - ./data:/var/lib/odoo
       - ./addons:/mnt/extra-addons
       - ./log:/var/log/odoo
-    command: -d acad -u testing
+    command: -d acad -u academic
   db:
     image: postgres:13
     environment:
