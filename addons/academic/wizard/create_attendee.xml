@@ -28,7 +28,7 @@
         <field name="res_model">academic.create.attendee.wizard</field>
         <field name="type">ir.actions.act_window</field>
         <field name="view_mode">form</field>
-        <field name="target">new</field>
+        <field name="target">new</field>        <!-- buka pop up baru -->
     </record>
 
     <menuitem name="Add Attendees" parent="academic_1"

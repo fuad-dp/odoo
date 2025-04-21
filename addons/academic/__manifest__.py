@@ -1,7 +1,7 @@
 {
     "name":"Academic Information System v1.0",
     "version":"1.0",
-    "depends": ["base"],
+    "depends": ["base","board"],
     "author":"your name",
     "category":"Education",
     "website":"your.website.com",
@@ -16,6 +16,8 @@
         "attendee.xml",
         "partner.xml",
         "wizard/create_attendee.xml",
+        "reports/session.xml",
+        "dashboard.xml",
     ],
     "installabe":True,
     "auto_install":False,

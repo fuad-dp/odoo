@@ -1,0 +1,48 @@
+<odoo>
+<data>
+
+    <record model="ir.ui.view" id="test_addon.form_partner_inherit">
+      <field name="name">test_addon.form_partner_inherit</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <field name="vat" position="after">
+            <field name="npwp"/>
+        </field>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="test_addon.form_partner_tree">
+      <field name="name">test_addon.form_partner_tree</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_tree"/>
+      <field name="arch" type="xml">
+        <field name="phone" position="after">
+            <field name="npwp"/>
+        </field>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="test_addon.form_partner_kanban">
+      <field name="name">test_addon.form_partner_kanban</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+      <field name="arch" type="xml">
+        <field name="email" position="after">
+            <field name="npwp"/>
+        </field>
+
+        <!-- NPWP ke tampilan visual Kanban -->
+        <xpath expr="//ul" position="inside">
+          <li t-if="record.npwp.raw_value">
+            <span><strong>NPWP:</strong> <t t-esc="record.npwp.value"/></span>
+          </li>
+        </xpath>
+      </field>
+
+    </record>
+
+
+    
+</data>
+</odoo>

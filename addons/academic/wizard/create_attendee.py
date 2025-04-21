@@ -23,7 +23,7 @@ class CreateAttendeeWizard(models.TransientModel):
     def action_add_attendee(self):
         self.ensure_one() #satu record
 
-        #untuk bisa nambah ke banyak session
+        #untuk bisa nambah ke banyak session (many2many)
         for ses in self.session_ids:
             #one2many
             ses.attendee_ids = [(0,0,{
